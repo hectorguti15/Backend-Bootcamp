@@ -12,19 +12,13 @@ app.use(express.urlencoded({ extended: true }));
 const ProductManager = require("./productManager");
 const productsList = new ProductManager("./data/products.json");
 
-
-
-
-
 app.get("/products", (req, res) => {
-  
-
   productsList
     .getProducts()
     .then((result) => {
       if (req.query.limit) {
         let products = result;
-        if (products.length >= 1 && products.length >= req.query.limit ) {
+        if (products.length >= 1 && products.length >= req.query.limit) {
           let productsLimited = products.filter(
             (product) => product.id <= req.query.limit
           );
@@ -65,25 +59,25 @@ app.get("/products", (req, res) => {
     );
 });
 
-app.get("/products/:pid",(req,res) =>{
-   let id = req.params.pid;
-   productsList.getProductById(id)
-    .then(result =>{
-        res.status(200).json({
-            status: "success",
-            msg: "producto encontrado",
-            data: result
-        })
+app.get("/products/:pid", (req, res) => {
+  let id = req.params.pid;
+  productsList.getProductById(id)
+    .then((result) => {
+      res.status(200).json({
+        status: "success",
+        msg: "producto encontrado",
+        data: result,
+      });
     })
-    .catch(result =>{
-        res.status(404).json({
-            status:"error",
-            msg:"producto no encontrado",
-            data: result
-        })
-    })
-
-})
+    .catch((result) =>
+      res.status(404).json({
+        status: "error",
+        msg: "productos no encontrados",
+        data: null,
+      })
+    );
+    
+});
 
 app.listen(port, () => {
   console.log(`app is running out on port ${port}`);

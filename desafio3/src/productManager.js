@@ -12,22 +12,25 @@ class ProductManager {
         await fs.promises.readFile(this.path, "utf-8")
       );
       return this.productsList;
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log(err);
     }
   }
   async getProductById(id) {
-    try{
+    try {
       this.productsList = JSON.parse(
         await fs.promises.readFile(this.path, "utf-8")
       );
       let findProduct = this.productsList.find((product) => product.id == id);
+      if (!findProduct) {
+        throw new Error("Producto no encontrado");
+      }
       return findProduct;
-    }
-    catch(error){
-      console.log(error instanceof RangeError)
+    } catch (err) {
+      throw new Error("Error al obtener el producto");
     }
   }
+  
   #getId() {
     let id = 0;
     id = this.productsList.length;
