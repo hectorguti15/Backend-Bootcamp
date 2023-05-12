@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "nombre": "Camiseta blanca",
+      "descripcion": "Camiseta de algodón blanca con cuello redondo y manga corta.",
+      "ruta_imagen": "/img/camiseta_blanca.jpg",
+      "precio": 15.99,
+      "stock": 50,
+      "codigo": "ABC123"
+    },
+    {
+      "id": 2,
+      "nombre": "Jeans negros",
+      "descripcion": "Pantalones jeans negros para hombre, talle ajustado.",
+      "ruta_imagen": "/img/jeans_negros.jpg",
+      "precio": 45.99,
+      "stock": 20,
+      "codigo": "DEF456"
+    },
+    {
+      "id": 3,
+      "nombre": "Chaqueta de cuero",
+      "descripcion": "Chaqueta de cuero para mujer en color marrón con cierre de cremallera.",
+      "ruta_imagen": "/img/chaqueta_cuero.jpg",
+      "precio": 99.99,
+      "stock": 10,
+      "codigo": "GHI789"
+    },
+    {
+      "id": 4,
+      "nombre": "Sudadera con capucha",
+      "descripcion": "Sudadera con capucha en color gris oscuro con estampado de la marca en la parte delantera.",
+      "ruta_imagen": "/img/sudadera_capucha.jpg",
+      "precio": 29.99,
+      "stock": 30,
+      "codigo": "JKL012"
+    },
+    {
+      "id": 5,
+      "nombre": "Botas de senderismo",
+      "descripcion": "Botas de senderismo impermeables en color marrón y suela antideslizante.",
+      "ruta_imagen": "/img/botas_senderismo.jpg",
+      "precio": 79.99,
+      "stock": 15,
+      "codigo": "MNO345"
+    },
+    {
+      "id": 6,
+      "nombre": "Vestido de fiesta",
+      "descripcion": "Vestido de fiesta largo en color rojo con escote en V y espalda descubierta.",
+      "ruta_imagen": "/img/vestido_fiesta.jpg",
+      "precio": 149.99,
+      "stock": 5,
+      "codigo": "PQR678"
+    },
+    {
+      "id": 7,
+      "nombre": "Reloj de pulsera",
+      "descripcion": "Reloj de pulsera para hombre en acero inoxidable con cronómetro y resistente al agua.",
+      "ruta_imagen": "/img/reloj_pulsera.jpg",
+      "precio": 129.99,
+      "stock": 8,
+      "codigo": "STU901"
+    },
+    {
+      "id": 8,
+      "nombre": "Gafas de sol",
+      "descripcion": "Gafas de sol para mujer en estilo aviador con lentes polarizadas.",
+      "ruta_imagen": "/img/gafas_sol.jpg",
+      "precio": 49.99,
+      "stock": 25,
+      "codigo": "VWX234"
+    }
+]
+  
